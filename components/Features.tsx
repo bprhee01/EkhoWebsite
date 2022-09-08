@@ -53,8 +53,8 @@ export function Feature({ icon: Icon, title, description }: FeatureProps) {
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    paddingTop: theme.spacing.xl * 4,
-    paddingBottom: theme.spacing.xl * 4,
+    paddingTop: theme.spacing.xl ,
+    paddingBottom: theme.spacing.xl ,
   },
 
   title: {

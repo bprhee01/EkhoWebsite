@@ -17,8 +17,8 @@ const useStyles = createStyles((theme) => ({
   inner: {
     display: 'flex',
     justifyContent: 'space-between',
-    paddingTop: theme.spacing.xl * 4,
-    paddingBottom: theme.spacing.xl * 4,
+    paddingTop: theme.spacing.xl /2 ,
+    paddingBottom: theme.spacing.xl ,
   },
 
   content: {
@@ -76,7 +76,7 @@ export default function Intro() {
               Introducing <br /> Ekho
             </Title>
             <Text color="dimmed" mt="md">
-              A monitoring tool to integrate Monolith Code to the Microservice Architecture
+              A Lightweight, Open-Source, Monitoring tool to integrate Monolith Code to the Microservice Architecture
             </Text>
 
             <List
