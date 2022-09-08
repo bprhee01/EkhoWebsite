@@ -62,3 +62,16 @@ img {
   display: flex;
   justify-content: center;
 }
+
+/* Docs Page Style */
+.docsPageBody {
+  display: flex;
+}
+.Sidebar {
+  width: 20%
+}
+.docsDetails {
+  display: flex;
+  width:100%;
+  flex-direction: column;
+}

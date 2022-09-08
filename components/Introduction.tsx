@@ -11,7 +11,6 @@ import {
 } from '@mantine/core';
 import { IconCheck, IconBrandGithub } from '@tabler/icons';
 import Link from 'next/link';
-import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -51,7 +50,6 @@ const useStyles = createStyles((theme) => ({
 
   image: {
     flex: 3,
-
     [theme.fn.smallerThan('md')]: {
        display: 'none',
     },
@@ -113,7 +111,9 @@ export default function Intro() {
               </Link>
             </Group>
           </div>
-          <Image src="https://ui.mantine.dev/_next/static/media/image.9a65bd94.svg" className={classes.image} width={"100%"} />
+          <Container fluid={true}>
+          {/* <Image src="https://ui.mantine.dev/_next/static/media/image.9a65bd94.svg" className={classes.image} /> */}
+          </Container>
         </div>
       </Container>
     </div>
