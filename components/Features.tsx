@@ -7,38 +7,26 @@ import {
   useMantineTheme,
   createStyles,
 } from '@mantine/core';
-import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock, TablerIcon } from '@tabler/icons';
+import { IconGauge, IconCookie, IconUser, IconAssembly, IconReportAnalytics, TablerIcon } from '@tabler/icons';
 
 export const MOCKDATA = [
   {
     icon: IconGauge,
     title: 'Extreme performance',
     description:
-      'This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit',
+      'Ekho is built to handle high user load and abstract away the work from your codebase',
   },
   {
-    icon: IconUser,
-    title: 'Privacy focused',
+    icon: IconAssembly,
+    title: 'Testing in Production',
     description:
-      'People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma',
+      'Download our npm package and wrap your legacy module',
   },
   {
-    icon: IconCookie,
-    title: 'No third parties',
+    icon: IconReportAnalytics,
+    title: 'Visualize Important Metrics',
     description:
-      'They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves',
-  },
-  {
-    icon: IconLock,
-    title: 'Secure by default',
-    description:
-      'Although it still can’t fly, its jumping power is outstanding, in Alola the mushrooms on Paras don’t grow up quite right',
-  },
-  {
-    icon: IconMessage2,
-    title: '24/7 Support',
-    description:
-      'Rapidash usually can be seen casually cantering in the fields and plains, Skitty is known to chase around after its own tail',
+      'See your result\`s tests in Ekho`\s frontend',
   },
 ];
 
@@ -92,14 +80,13 @@ const useStyles = createStyles((theme) => ({
 
 interface FeaturesGridProps {
   title: React.ReactNode;
-  description: React.ReactNode;
   data?: FeatureProps[];
 }
 
 export const titleText: string = 'Optimize your microservice architecture with an easy-to-use monitoring tool';
 export const descriptionText: string = 'Understand the performance of '
 
-export default function FeaturesGrid({ title = titleText, description, data = MOCKDATA }: FeaturesGridProps) {
+export default function Features({ title = titleText, data = MOCKDATA }: FeaturesGridProps) {
   const { classes, theme } = useStyles();
   const features = data.map((feature, index) => <Feature {...feature} key={index} />);
 
@@ -107,12 +94,6 @@ export default function FeaturesGrid({ title = titleText, description, data = MO
     <>
       <Container className={classes.wrapper}>
         <Title className={classes.title}>{title}</Title>
-
-        <Container size={560} p={0}>
-          <Text size="sm" className={classes.description}>
-            {description}
-          </Text>
-        </Container>
 
         <SimpleGrid
           mt={60}
